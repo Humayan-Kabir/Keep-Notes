@@ -1,0 +1,9 @@
+.glyph-icon:hover{
+    -fx-cursor:hand;
+}
+.text-area {
+    text-area-background:  linear-gradient(#fdfdca, #fcf9a2);
+}
+.text-area .content{
+    -fx-background-color: text-area-background;
+}

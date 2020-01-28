@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="657.0" style="-fx-background-color: #f8f7b6;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.FXMLController">
+   <top>
+      <HBox fx:id="hboxpressed" alignment="CENTER_RIGHT" style="-fx-background-color: #f8f7b6;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <MaterialDesignIconView fill="#1dd1a1" glyphName="CONTENT_SAVE" onMouseClicked="#savenotesiconclicked" size="1.5em" translateX="-440.0" />
+            <MaterialDesignIconView fill="#ee5253" glyphName="DELETE" onMouseClicked="#deletenotepressed" size="1.5em" translateX="-500.0" />
+            <FontAwesomeIconView fx:id="plusicon" glyphName="PLUS" onMouseClicked="#addnotesevent" size="1.3em" translateX="-560.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="minusicon" glyphName="MINUS" onMouseClicked="#min" size="1.3em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="maxicon" fill="#1dd1a1" glyphName="CIRCLE" layoutX="15.0" layoutY="25.0" onMouseClicked="#max" size="1.3em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="crossicon" fill="#ee5253" glyphName="CLOSE" onMouseClicked="#close" size="1.3em">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TextArea fx:id="notetextarea" prefHeight="395.0" prefWidth="597.0" promptText="keep your note here" style="-fx-background-color: #f8f7b6;" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Consolas Italic" size="20.0" />
+         </font>
+      </TextArea>
+   </center>
+</BorderPane>
